@@ -53,6 +53,8 @@ if($usermail == true){
             <li class="pagebtn"><img src="../image/icon/wallet.png">&nbsp&nbsp&nbsp Payment</li>            
             <li class="pagebtn"><img src="../image/icon/bedroom.png">&nbsp&nbsp&nbsp Rooms</li>
             <li class="pagebtn"><img src="../image/icon/staff.png">&nbsp&nbsp&nbsp Staff</li>
+            <li class="pagebtn"><img src="../image/icon/staff.png">&nbsp&nbsp&nbsp Client Issues</li>
+
         </ul>
     </nav>
 

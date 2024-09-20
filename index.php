@@ -1,8 +1,6 @@
 <?php
-
 include 'config.php';
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,12 +43,9 @@ session_start();
 
     <!-- main section -->
     <section id="auth_section">
-
         <div class="logo">
-            
             <p>BOOK MY STAY</p>
         </div>
-
         <div class="auth_container">
             <!-----------login -------------->
 
@@ -63,27 +58,85 @@ session_start();
 
                 <!----------userlogin--------->
                 <?php 
+                // session_start();
+                // if (isset($_POST['user_login_submit'])) {
+                //     $Email = mysqli_real_escape_string($conn, $_POST['Email']);
+                //     $Password = mysqli_real_escape_string($conn, $_POST['Password']);
+                    
+                //     $sql = "SELECT * FROM users WHERE Email = '$Email' AND Password = BINARY'$Password'";
+                //     $result = mysqli_query($conn, $sql);
+
+                //     if ($result->num_rows > 0) {
+                //         $_SESSION['usermail']=$Email;
+                //         $Email = "";
+                //         $Password = "";
+                //         header("Location: home.php");
+                //     } else {
+                //         if (empty($Email) || empty($Password)) {
+                //             echo "<script>swal({
+                //                 title: 'Invalid Email and Password!',
+                //                 icon: 'error',
+                //             });
+                //             </script>";
+                //     } else {
+                //         echo "<script>swal({
+                //             title: 'Something went wrong',
+                //             icon: 'error',
+                //         });
+                //         </script>";
+                //     }
+                // }
+
                 if (isset($_POST['user_login_submit'])) {
-                    $Email = $_POST['Email'];
-                    $Password = $_POST['Password'];
-
-                    $sql = "SELECT * FROM users WHERE Email = '$Email' AND Password = BINARY'$Password'";
-                    $result = mysqli_query($conn, $sql);
-
-                    if ($result->num_rows > 0) {
-                        $_SESSION['usermail']=$Email;
-                        $Email = "";
-                        $Password = "";
-                        header("Location: home.php");
-                    } else {
+                    
+                    $Email = mysqli_real_escape_string($conn, $_POST['Email']);
+                    $Password = mysqli_real_escape_string($conn, $_POST['Password']);
+                
+                    
+                    if (empty($Email) || empty($Password)) {
                         echo "<script>swal({
-                            title: 'Something went wrong',
+                            title: 'Email and Password cannot be empty!',
                             icon: 'error',
                         });
                         </script>";
+                    } 
+                    
+                    elseif (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
+                        echo "<script>swal({
+                            title: 'Invalid Email format!',
+                            icon: 'error',
+                        });
+                        </script>";
+                    } 
+                    
+                    elseif (strlen($Password) < 8) {
+                        echo "<script>swal({
+                            title: 'Password must be at least 8 characters long!',
+                            icon: 'error',
+                        });
+                        </script>";
+                    } 
+                    else {
+                        $sql = "SELECT * FROM users WHERE Email = '$Email' AND Password = BINARY'$Password'";
+                        $result = mysqli_query($conn, $sql);
+
+                        if ($result->num_rows > 0) {
+                            $_SESSION['usermail']=$Email;
+                            $Email = "";
+                            $Password = "";
+                            header("Location: home.php");
+                            
+                         } else {
+                                echo "<script>swal({
+                                    title: 'Incorrect Email or Password!',
+                                    icon: 'error',
+                                });
+                                </script>";
+                            } 
                     }
                 }
                 ?>
+                
                 <form class="user_login authsection active" id="userlogin" action="" method="POST">
                     <div class="form-floating">
                         <input type="text" class="form-control" name="Username" placeholder=" ">
@@ -105,12 +158,12 @@ session_start();
                 </form>
                 
                 <!-------- Emp Login ----------->
-                <?php              
-                    if (isset($_POST['Emp_login_submit'])) {
-                        $Email = $_POST['Emp_Email'];
-                        $Password = $_POST['Emp_Password'];
+                <?php             
+                    if (isset($_POST['submit'])) {
+                        $Email = $_POST['Email'];
+                        $Password = $_POST['Password'];
 
-                        $sql = "SELECT * FROM admin WHERE Emp_Email = '$Email' AND Emp_Password = BINARY'$Password'";
+                        $sql = "SELECT * FROM admin WHERE Email = '$Email' AND Password = BINARY'$Password'";
                         $result = mysqli_query($conn, $sql);
 
                         if ($result->num_rows > 0) {
@@ -129,80 +182,88 @@ session_start();
                 ?> 
                 <form class="employee_login authsection" id="employeelogin" action="" method="POST">
                     <div class="form-floating">
-                        <input type="email" class="form-control" name="Emp_Email" placeholder=" ">
+                        <input type="email" class="form-control" name="Email" placeholder="">
                         <label for="floatingInput">Email</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" name="Emp_Password" placeholder=" ">
+                        <input type="password" class="form-control" name="Password" placeholder="">
                         <label for="floatingPassword">Password</label>
                     </div>
-                    <button type="submit" name="Emp_login_submit" class="auth_btn">Log in</button>
+                    <button type="submit" name="submit" class="auth_btn">Log in</button>
                 </form>
                 
             </div>
 
-            <!-------------------signup ---------------->
-            <?php       
-                if (isset($_POST['user_signup_submit'])) {
-                    $Username = $_POST['Username'];
-                    $Email = $_POST['Email'];
-                    $Password = $_POST['Password'];
-                    $CPassword = $_POST['CPassword'];
+            <!------------------- user signup ---------------->
+            <?php
+include 'config.php';
 
-                    if($Username == "" || $Email == "" || $Password == ""){
-                        echo "<script>swal({
-                            title: 'Fill the proper details',
-                            icon: 'error',
-                        });
-                        </script>";
-                    }
-                    else{
-                        if ($Password == $CPassword) {
-                            $sql = "SELECT * FROM users WHERE Email = '$Email'";
-                            $result = mysqli_query($conn, $sql);
-    
-                            if ($result->num_rows > 0) {
-                                echo "<script>swal({
-                                    title: 'Email already exits',
-                                    icon: 'error',
-                                });
-                                </script>";
-                            } else {
-                                $sql = "INSERT INTO users (Username,Email,Password) VALUES ('$Username', '$Email', '$Password')";
-                                $result = mysqli_query($conn, $sql);
-    
-                                if ($result) {
-                                    $_SESSION['usermail']=$Email;
-                                    $Username = "";
-                                    $Email = "";
-                                    $Password = "";
-                                    $CPassword = "";
-                                    header("Location: home.php");
-                                } else {
-                                    echo "<script>swal({
-                                        title: 'Something went wrong',
-                                        icon: 'error',
-                                    });
-                                    </script>";
-                                }
-                            }
-                        } else {
-                            echo "<script>swal({
-                                title: 'Password does not matched',
-                                icon: 'error',
-                            });
-                            </script>";
-                        }
-                    }
-                    
-                }
-            ?>
+if (isset($_POST['user_signup_submit'])) {
+    $Email = mysqli_real_escape_string($conn, $_POST['Email']);
+    $Password = mysqli_real_escape_string($conn, $_POST['Password']);
+    $ConfirmPassword = mysqli_real_escape_string($conn, $_POST['ConfirmPassword']);
+
+    // Validate input fields
+    if (empty($Email) || empty($Password) || empty($ConfirmPassword)) {
+        echo "<script>swal({
+            title: 'All fields are required!',
+            icon: 'error',
+        });
+        </script>";
+    } elseif (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>swal({
+            title: 'Invalid Email format!',
+            icon: 'error',
+        });
+        </script>";
+    } elseif ($Password !== $ConfirmPassword) {
+        echo "<script>swal({
+            title: 'Passwords do not match!',
+            icon: 'error',
+        });
+        </script>";
+    } else {
+        // Hash the password before saving to the database
+        $hashedPassword = password_hash($Password, PASSWORD_BCRYPT);
+
+        // Check if email already exists
+        $checkEmailSql = "SELECT * FROM users WHERE Email = '$Email'";
+        $checkResult = mysqli_query($conn, $checkEmailSql);
+
+        if (mysqli_num_rows($checkResult) > 0) {
+            echo "<script>swal({
+                title: 'Email is already in use!',
+                icon: 'error',
+            });
+            </script>";
+        } else {
+            // Insert new user into the database
+            $sql = "INSERT INTO users (Email, Password) VALUES ('$Email', '$hashedPassword')";
+            if (mysqli_query($conn, $sql)) {
+                echo "<script>swal({
+                    title: 'Registration successful!',
+                    icon: 'success',
+                }).then(function() {
+                    window.location.href = 'login.php';
+                });
+                </script>";
+            } else {
+                echo "<script>swal({
+                    title: 'Something went wrong, please try again.',
+                    icon: 'error',
+                });
+                </script>";
+            }
+        }
+    }
+}
+?>
+
             <div id="sign_up">
                 <h2>Sign Up</h2>
-
                 <form class="user_signup" id="usersignup" action="" method="POST">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="Username" placeholder=" ">
+                        <input type="text" class="form-control" name="Username" placeholder="username">
                         <label for="Username">Username</label>
                     </div>
                     <div class="form-floating">
@@ -214,12 +275,10 @@ session_start();
                         <label for="Password">Password</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" name="CPassword" placeholder=" ">
-                        <label for="CPassword">Confirm Password</label>
+                        <input type="password" class="form-control" name="ConfirmPassword" placeholder=" ">
+                        <label for="ConfirmPassword">Confirm Password</label>
                     </div>
-
                     <button type="submit" name="user_signup_submit" class="auth_btn">Sign up</button>
-
                     <div class="footer_line">
                         <h6>Already have an account? <span class="page_move_btn" onclick="loginpage()">Log in</span></h6>
                     </div>
@@ -228,12 +287,8 @@ session_start();
     </section>
 </body>
 
-
 <script src="./javascript/index.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<!-- aos animation-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();

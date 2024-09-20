@@ -44,13 +44,15 @@ if($usermail == true){
 <body>
   <nav>
     <div class="logo">
-      
-      <p>Book My Stay</p>
+    <img class="bluebirdlogo" src="./image/bluebirdlogo.png">
+      <p>StayEASY</p>
     </div>
     <ul>
       <li><a href="#firstsection">Home</a></li>
       <li><a href="#secondsection">Rooms</a></li>
+      <li><a href="report_issue.php">Report Issue</a></li>
       <li><a href="#thirdsection">Facilites</a></li>
+
       <li><a href="contact.php">Contact</a>
 </li>
       <a href="./logout.php"><button class="btn btn-danger">Logout</button></a>
@@ -72,9 +74,7 @@ if($usermail == true){
             <img class="carousel-image" src="./image/stayeasy1.jpg">
         </div>
 
-        <div class="welcomeline">
-          <h1 class="welcometag">Welcome to heaven on earth</h1>
-        </div>
+        
 
       <!-- bookbox -->
       <div id="guestdetailpanel">

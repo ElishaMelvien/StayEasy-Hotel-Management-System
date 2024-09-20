@@ -514,7 +514,7 @@
 	<aside>
 		<h1><span>Contact us</span></h1>
 		<div>
-			<p align="center">Email :- maureennankonde@gmail.com || Web :- www.Book My Stay.com || Phone :- +260779002328 </p>
+			<p align="center">Email :- Elihotech1@gmail.com || Web :- www.Book My Stay.com || Phone :- +260 978 195 399</p>
 		</div>
 	</aside>
 
