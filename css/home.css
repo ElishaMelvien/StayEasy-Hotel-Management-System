@@ -84,8 +84,7 @@ ul li a:hover{
     display: flex;
     align-items: center;
     font-size: 30px;
-    color: rgb(233, 8, 46);
-    text-shadow: var(--bg-text-shadow);
+    color: blue;
 }
 
 #firstsection{
@@ -238,11 +237,19 @@ font-size: 30px;
 }
 
 .logoutbtn{
-    height: 20px;
-    width: 200px;
-    background-color: rgba(216, 19, 19, 0.804);
+    height: 36px;
+    width: 120px;
+    background-color: rgba(145, 8, 236, 0.804);
+    border: none;
+    color:white;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
+.logoutbtn:hover{
+    background-color: rgba(44, 3, 71, 0.804);
+
+}
 #thirdsection{
     height: 80vh;
     width: 100%;
@@ -289,7 +296,6 @@ font-size: 30px;
     background-size: cover;
 }
 
-}
 
 #contactus{
     height: 70px;

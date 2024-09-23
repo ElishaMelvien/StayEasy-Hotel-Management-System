@@ -40,15 +40,16 @@
         }
         .btn {
             padding: 0.5rem 1rem;
-            font-size: 0.875rem;
+            font-size: 0.9800rem;
             border: none;
-            background-color: #28a745;
+            /* background-color: #28a745; */
+            background: #18d26e;
             color: white;
             cursor: pointer;
         }
         .btn:hover {
             color: white;
-            background-color: orange;
+            background-color: #28a745;
         }
         .input-group {
             display: flex;
@@ -77,7 +78,7 @@
 
 <body>
     <!-- Header Start -->
-    <div class="container-fluid bg-primary py-2 mb-2 page-header">
+    <div class="container-fluid bg-primary py-1 mb-1 page-header">
         <div class="container py-3">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
@@ -98,7 +99,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Room Service Support</h6>
+                <h6 class="section-title bg-white text-center text-primary px-4">Room Service Support</h6>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
@@ -152,7 +153,7 @@
                                 </div>
                                 <input type="hidden" id="reported_by" name="reported_by" value="<?= $_SESSION['user_id'] ?>">
                                 <div class="col-12 text-center">
-                                    <button class="btn" type="submit" id="submitButton">Submit Issue</button>
+                                    <button class="btn" type="submit" id="submitButton">Submit</button>
                                 </div>
                             </div>
                         </form>
