@@ -49,7 +49,6 @@ $userid = $_SESSION['user_id'];
       <li><a href="#secondsection">Rooms</a></li>
       <li><a href="report_issue.php">Support</a></li>
       <li><a href="#thirdsection">Facilites</a></li>
-
       <li><a href="contact.php">Contact</a>
 </li>
       <a href="./logout.php"><button class="logoutbtn">Logout</button></a>
@@ -286,6 +285,7 @@ $userid = $_SESSION['user_id'];
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-solid fa-envelope"></i>
     </div>
+
   </section>
 </body>
 

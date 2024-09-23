@@ -22,10 +22,11 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    
     
     <style>
         .form-container {
@@ -93,8 +94,10 @@
             </div>
         </div>
     </div>
-    <!-- Header End -->
 
+    
+    <!-- Header End -->
+   
     <!-- Issue Reporting Form Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -163,16 +166,6 @@
         </div>
     </div>
     <!-- Issue Reporting Form End -->
-
-    <!-- JavaScript Libraries -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script> -->
-    <!-- <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script> 
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>  -->
-
     <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -180,10 +173,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
-    <!-- Template Javascript -->
-    <!-- <script src="js/main.js"></script> -->
 
     <!-- Custom JavaScript for Form Submission -->
     <script>
@@ -196,10 +185,7 @@
             const issueForm = document.getElementById('issueForm');
             const submitButton = document.getElementById('submitButton');
             const formData = new FormData(issueForm);
-
-            // Show loading state
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
+            
 
             fetch('submit_issue.php', {
                 method: 'POST',
@@ -232,11 +218,7 @@
                     confirmButtonText: 'Ok'
                 });
             })
-            .finally(() => {
-                // Reset the button to normal state
-                submitButton.disabled = false;
-                submitButton.textContent = 'Submit Issue';
-            });
+            
         }
 
         document.getElementById('severity').addEventListener('change', function() {
@@ -264,5 +246,4 @@
         });
     </script>
 </body>
-
 </html>
