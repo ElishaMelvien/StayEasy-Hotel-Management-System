@@ -3,17 +3,14 @@
 include 'config.php';
 session_start();
 
-// page redirect
-$usermail="";
-$usermail=$_SESSION['usermail'];
-if($usermail == true){
-
-}else{
+if (!isset($_SESSION['usermail']) || !isset($_SESSION['user_id'])) {
   header("location: index.php");
+  exit;
 }
+$usermail = $_SESSION['usermail'];
+$userid = $_SESSION['user_id'];
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +20,7 @@ if($usermail == true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.css">
     <title>Book My Stay</title>
-    <!-- boot -->
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- fontowesome -->
@@ -50,7 +47,7 @@ if($usermail == true){
     <ul>
       <li><a href="#firstsection">Home</a></li>
       <li><a href="#secondsection">Rooms</a></li>
-      <li><a href="report_issue.php">Report Issue</a></li>
+      <li><a href="report_issue.php">Support</a></li>
       <li><a href="#thirdsection">Facilites</a></li>
 
       <li><a href="contact.php">Contact</a>
@@ -73,8 +70,6 @@ if($usermail == true){
         <div class="carousel-item">
             <img class="carousel-image" src="./image/stayeasy1.jpg">
         </div>
-
-        
 
       <!-- bookbox -->
       <div id="guestdetailpanel">
@@ -134,6 +129,9 @@ if($usermail == true){
 						<option value selected >Meal</option>
                         <option value="Room only">Room only</option>
                         <option value="Breakfast">Breakfast</option>
+                        <option value="Dessery">Dessert</option>
+                        <option value="Lunch">Lunch</option>
+
 						<option value="Half Board">Half Board</option>
 						<option value="Full Board">Full Board</option>
 					</select>
