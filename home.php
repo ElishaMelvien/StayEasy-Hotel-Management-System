@@ -202,7 +202,7 @@ $userid = $_SESSION['user_id'];
   <section id="secondsection"> 
     <img src="./image/homeanimatebg.svg">
     <div class="ourroom">
-      <h1 class="head">≼ Our room ≽</h1>
+      <h1 class="head">≼ Our Rooms ≽</h1>
       <div class="roomselect">
         <div class="roombox">
           <div class="hotelphoto h1"></div>
@@ -273,17 +273,11 @@ $userid = $_SESSION['user_id'];
       <div class="box">
         <h2>Sun Deck</h2>
       </div>
-      
-        
-      </div>
-    </div>
-  </section>
-
-  <section id="contactus">
-    <div class="social">
+      <!-- <div>
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-solid fa-envelope"></i>
+      </div> -->
     </div>
 
   </section>
