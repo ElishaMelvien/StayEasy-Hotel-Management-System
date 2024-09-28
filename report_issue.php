@@ -42,9 +42,9 @@
         .btn {
             padding: 0.5rem 1rem;
             font-size: 0.9800rem;
-            border: none;
-            /* background-color: #28a745; */
-            background: #18d26e;
+            border: none;j
+            background-color: blue;
+            filter: contrast(1.2) brightness(1.1) saturate(1.3);
             color: white;
             cursor: pointer;
         }
