@@ -25,9 +25,6 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-    
-    
     <style>
         .form-container {
             max-width: 500px; 
@@ -94,8 +91,6 @@
             </div>
         </div>
     </div>
-
-    
     <!-- Header End -->
    
     <!-- Issue Reporting Form Start -->

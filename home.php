@@ -261,27 +261,48 @@ $userid = $_SESSION['user_id'];
   <section id="thirdsection">
     <h1 class="head">≼ Facilities ≽</h1>
     <div class="facility">
-      <div class="box">
-        <h2>Swiming pool</h2>
-      </div>
-      <div class="box">
-        <h2>Meeting Room</h2>
-      </div>
-      <div class="box">
-        <h2>24*7 Restaurants</h2>
-      </div>
-      <div class="box">
-        <h2>Sun Deck</h2>
-      </div>
-      <!-- <div>
+        <div class="box">
+            <h2>Swimming Pool</h2>
+        </div>
+        <div class="box">
+            <h2>Meeting Room</h2>
+        </div>
+        <div class="box">
+            <h2>24*7 Restaurants</h2>
+        </div>
+        <div class="box">
+            <h2>Sun Deck</h2>
+        </div>
+    </div>
+    <br>
+    <h1 class="head">≼ More ≽</h1>
+    <div class="facility">
+        <div class="box">
+            <h2>Fitness</h2>
+        </div>
+        <div class="box">
+            <h2>Spa</h2>
+        </div>
+        <div class="box">
+            <h2>Chinese Food</h2>
+        </div>
+        <div class="box">
+            <h2>Entertainment</h2>
+        </div>
+    </div>
+</section>
+
+<!-- <section id="contactus">
+    <div class="social">
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-solid fa-envelope"></i>
-      </div> -->
     </div>
-
-  </section>
-</body>
+    <div class="createdby">
+      <h5>Powered by ElishaTechnologies</h5>
+      Copyright &copy; 2024. All rights reserved
+    </div>
+  </section> -->
 
 <script>
 
