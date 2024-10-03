@@ -117,7 +117,7 @@ include 'config.php';
                         <label for="Username">Username</label>
                     </div>
                     <div class="form-floating">
-                        <input typuser_logine="email" class="form-control" name="Email" placeholder=" ">
+                        <input type ="email" class="form-control" name="Email" placeholder=" ">
                         <label for="Email">Email</label>
                     </div>
                     <div class="form-floating">
@@ -191,7 +191,7 @@ include 'config.php';
                 </div>
                 <button type="submit" name="submit" class="auth_btn">Log in</button>
             </form>
-
+        </div>
 
             <!------------------- user signup ---------------->
             <?php
@@ -262,7 +262,7 @@ include 'config.php';
             ?>
             <div id="sign_up">
                 <h2>Sign Up</h2>
-                <form class="user_signup" id="usersignup" action="" method="POST">
+                <form class="user_signup" id="usersignup" action="" method="POST" style="display: none;">
                     <div class="form-floating">
                         <input type="text" class="form-control" name="Username" placeholder="username">
                         <label for="Username">Username</label>

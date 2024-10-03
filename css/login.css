@@ -78,7 +78,7 @@ section {
 .role_btn {
     display: flex;
     gap: 30px;
-    margin: 20px 0;
+    margin: 20px;
     flex-wrap: wrap;
 }
 
@@ -174,19 +174,33 @@ section {
     color: blue;
 }
 
-/* signup */
-#sign_up{
-    height: 100%;
+
+#sign_up {
+    height: auto;
     width: 100%;
-    display: none;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
 }
 
-.user_signup{
-    width: 70%;
+
+
+.user_signup {
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
     text-align: center;
     animation: screen_animation .4s;
+}
+
+body, html {
+    overflow: hidden;
+}
+
+.auth_container {
+    overflow: hidden;
 }
 
 /* animation frame */
@@ -195,8 +209,6 @@ section {
         transform: translateX(50px);
     }
 }
-
-
 
 /* responsive stuff */
 
