@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2024 at 05:53 PM
+-- Generation Time: Oct 07, 2024 at 10:18 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -59,8 +59,47 @@ CREATE TABLE `issues` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `room_id` int(30) DEFAULT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `usermail` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `issues`
+--
+
+INSERT INTO `issues` (`id`, `issue_type`, `guest_service`, `severity`, `message`, `reported_by`, `assigned_to`, `status`, `created_at`, `updated_at`, `room_id`, `user_id`, `usermail`) VALUES
+(3, 'Maintenance', 'Concierge', 'Medium', '0', 8, NULL, 'Reported', '2024-09-22 09:41:36', '2024-09-22 09:41:36', NULL, 8, 'Musenge@gmail.com'),
+(4, 'Cleanliness', 'Room Service', 'Low', '0', 8, NULL, 'Reported', '2024-09-22 09:46:34', '2024-09-22 09:46:34', NULL, 8, 'Musenge@gmail.com'),
+(5, 'Maintenance', 'Tea', 'Low', '0', 8, NULL, 'Reported', '2024-09-22 09:55:56', '2024-09-22 09:55:56', NULL, 8, 'Musenge@gmail.com'),
+(6, 'Maintenance', 'Room Service', 'High', '0', 8, NULL, 'Reported', '2024-09-23 06:28:15', '2024-09-23 06:28:15', NULL, 8, 'Musenge@gmail.com'),
+(7, 'Electrical', 'Tea', 'Medium', '0', 8, NULL, 'Reported', '2024-09-23 08:27:10', '2024-09-23 08:27:10', NULL, 8, 'Musenge@gmail.com'),
+(8, 'Cleanliness', NULL, 'Medium', '0', 8, NULL, 'Reported', '2024-09-23 08:51:19', '2024-09-23 08:51:19', NULL, 8, 'Musenge@gmail.com'),
+(9, 'Maintenance', 'Tea', 'High', '0', 8, NULL, 'Reported', '2024-09-23 10:19:09', '2024-09-23 10:19:09', NULL, 8, 'Musenge@gmail.com'),
+(10, 'Electrical', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:45:59', '2024-09-23 10:45:59', NULL, 8, 'Musenge@gmail.com'),
+(11, 'Electrical', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:46:06', '2024-09-23 10:46:06', NULL, 8, 'Musenge@gmail.com'),
+(12, 'Electrical', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:46:08', '2024-09-23 10:46:08', NULL, 8, 'Musenge@gmail.com'),
+(13, 'Electrical', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:46:09', '2024-09-23 10:46:09', NULL, 8, 'Musenge@gmail.com'),
+(14, 'Electrical', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:46:09', '2024-09-23 10:46:09', NULL, 8, 'Musenge@gmail.com'),
+(15, 'Electrical', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:46:11', '2024-09-23 10:46:11', NULL, 8, 'Musenge@gmail.com'),
+(16, 'Maintenance', 'Laundry', 'Low', '0', 8, NULL, 'Reported', '2024-09-23 10:47:11', '2024-09-23 10:47:11', NULL, 8, 'Musenge@gmail.com'),
+(17, 'Fire', NULL, 'Critical', '0', 8, NULL, 'Reported', '2024-09-23 12:45:06', '2024-09-23 12:45:06', NULL, 8, 'Musenge@gmail.com'),
+(18, 'Electrical', 'Laundry', 'Medium', '0', 8, NULL, 'Reported', '2024-09-23 12:45:41', '2024-09-23 12:45:41', NULL, 8, 'Musenge@gmail.com'),
+(19, 'Electrical', 'Tea', 'Critical', '0', 8, NULL, 'Reported', '2024-09-28 12:00:17', '2024-09-28 12:00:17', NULL, 8, 'Musenge@gmail.com'),
+(20, 'Cleanliness', 'Laundry', 'Medium', '0', 11, NULL, 'Reported', '2024-10-04 14:05:10', '2024-10-04 14:05:10', NULL, 11, 'Mapili45@gmail.com'),
+(21, 'Electrical', 'Laundry', 'High', '0', 11, NULL, 'Reported', '2024-10-04 14:10:37', '2024-10-04 14:10:37', NULL, 11, 'Mapili45@gmail.com'),
+(22, 'Electrical', 'Concierge', 'Medium', '0', 11, NULL, 'Reported', '2024-10-04 14:11:38', '2024-10-04 14:11:38', NULL, 11, 'Mapili45@gmail.com'),
+(23, 'Fire', 'Concierge', 'High', '0', 11, NULL, 'Reported', '2024-10-04 14:12:08', '2024-10-04 14:12:08', NULL, 11, 'Mapili45@gmail.com'),
+(24, 'Electrical', 'Laundry', 'Medium', '0', 11, NULL, 'Reported', '2024-10-04 14:12:28', '2024-10-04 14:12:28', NULL, 11, 'Mapili45@gmail.com'),
+(25, 'Cleanliness', 'Laundry', 'Medium', '0', 11, NULL, 'Reported', '2024-10-04 14:12:47', '2024-10-04 14:12:47', NULL, 11, 'Mapili45@gmail.com'),
+(26, 'Electrical', 'Concierge', 'Low', '0', 11, NULL, 'Reported', '2024-10-04 14:13:22', '2024-10-04 14:13:22', NULL, 11, 'Mapili45@gmail.com'),
+(27, 'Maintenance', 'Tea', 'Low', '0', 11, NULL, 'Reported', '2024-10-04 14:14:48', '2024-10-04 14:14:48', NULL, 11, 'Mapili45@gmail.com'),
+(28, 'Cleanliness', 'Laundry', 'High', '0', 11, NULL, 'Reported', '2024-10-04 14:15:05', '2024-10-04 14:15:05', NULL, 11, 'Mapili45@gmail.com'),
+(29, 'Maintenance', 'Laundry', 'Low', '0', 11, NULL, 'Reported', '2024-10-04 14:15:27', '2024-10-04 14:15:27', NULL, 11, 'Mapili45@gmail.com'),
+(30, 'Cleanliness', 'Concierge', 'Low', '0', 11, NULL, 'Reported', '2024-10-04 14:18:22', '2024-10-04 14:18:22', NULL, 11, 'Mapili45@gmail.com'),
+(31, 'Electrical', 'Tea', 'High', '0', 11, NULL, 'Reported', '2024-10-04 14:21:50', '2024-10-04 14:21:50', NULL, 11, 'Mapili45@gmail.com'),
+(32, 'Electrical', 'Tea', 'Medium', '0', 11, NULL, 'Reported', '2024-10-04 14:23:05', '2024-10-04 14:23:05', NULL, 11, 'Mapili45@gmail.com'),
+(33, 'Maintenance', 'Laundry', 'Medium', '0', 11, NULL, 'Reported', '2024-10-04 14:55:18', '2024-10-04 14:55:18', NULL, 11, 'Mapili45@gmail.com'),
+(34, 'Electrical', 'Concierge', 'Low', '0', 11, NULL, 'Reported', '2024-10-05 07:10:00', '2024-10-05 07:10:00', NULL, 11, 'Mapili45@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -91,7 +130,11 @@ CREATE TABLE `payment` (
 
 INSERT INTO `payment` (`id`, `Name`, `Email`, `RoomType`, `Bed`, `NoofRoom`, `cin`, `cout`, `noofdays`, `roomtotal`, `bedtotal`, `meal`, `mealtotal`, `finaltotal`) VALUES
 (41, 'Tushar pankhaniya', 'pankhaniyatushar9@gmail.com', 'Single Room', 'Single', 1, '2022-11-09', '2022-11-10', 1, 1000.00, 10.00, 'Room only', 0.00, 1010.00),
-(51, 'Jerome Aphrodite Mckee Washing', 'soqoheca@mailinator.com', 'Single Room', '', 1, '2024-09-27', '2024-09-13', -14, -14000.00, 0.00, '', 0.00, -14000.00);
+(52, 'Clinton Manja', 'soqoheca@mailinator.com', 'Superior Room', 'Single', 1, '2024-09-09', '2024-09-13', 4, 12000.00, 120.00, 'Room only', 0.00, 12120.00),
+(53, 'Elisha Musenge', 'elishotech1@gmail.com', 'Superior Room', 'Single', 1, '2024-09-24', '2024-09-27', 3, 9000.00, 90.00, 'Breakfast', 180.00, 9270.00),
+(54, 'Abednego Mwanza', 'MwanzaAzariah23@gmai.com', 'Superior Room', 'Triple', 1, '2024-09-23', '2024-09-26', 3, 9000.00, 270.00, 'Full Board', 1080.00, 10350.00),
+(55, 'Abednego Mwanza', 'MwanzaAzariah23@gmai.com', 'Superior Room', 'Triple', 1, '2024-09-23', '2024-09-26', 3, 9000.00, 270.00, 'Full Board', 1080.00, 10350.00),
+(56, 'Abednego Mwanza', 'MwanzaAzariah23@gmai.com', 'Superior Room', 'Triple', 1, '2024-09-23', '2024-09-26', 3, 9000.00, 270.00, 'Full Board', 1080.00, 10350.00);
 
 -- --------------------------------------------------------
 
@@ -178,7 +221,11 @@ CREATE TABLE `roombook` (
 INSERT INTO `roombook` (`id`, `Name`, `Email`, `Country`, `Phone`, `RoomType`, `Bed`, `Meal`, `NoofRoom`, `cin`, `cout`, `nodays`, `stat`) VALUES
 (41, 'Tushar pankhaniya', 'pankhaniyatushar9@gmail.com', 'India', '9313346569', 'Single Room', 'Single', 'Room only', '1', '2022-11-09', '2022-11-10', 1, 'Confirm'),
 (51, 'Jerome Aphrodite Mckee Washington', 'soqoheca@mailinator.com', 'Zambia', '+260978195399', 'Single Room', '', '', '1', '2024-09-27', '2024-09-13', -14, 'Confirm'),
-(52, 'Clinton Manja', 'soqoheca@mailinator.com', 'Zambia', '+260978195399', 'Superior Room', 'Single', 'Room only', '1', '2024-09-09', '2024-09-13', 4, 'NotConfirm');
+(52, 'Clinton Manja', 'soqoheca@mailinator.com', 'Zambia', '+260978195399', 'Superior Room', 'Single', 'Room only', '1', '2024-09-09', '2024-09-13', 4, 'Confirm'),
+(53, 'Elisha Musenge', 'elishotech1@gmail.com', 'Zambia', '+260978195399', 'Superior Room', 'Single', 'Breakfast', '1', '2024-09-24', '2024-09-27', 3, 'Confirm'),
+(54, 'Abednego Mwanza', 'MwanzaAzariah23@gmai.com', 'Zambia', '+260978195398', 'Superior Room', 'Triple', 'Full Board', '1', '2024-09-23', '2024-09-26', 3, 'Confirm'),
+(55, 'Abednego Mwanza', 'MwanzaAzariah23@gmai.com', 'Zambia', '+260978195398', 'Superior Room', 'Triple', 'Full Board', '1', '2024-09-23', '2024-09-26', 3, 'Confirm'),
+(56, 'Abednego Mwanza', 'MwanzaAzariah23@gmai.com', 'Zambia', '+260978195398', 'Superior Room', 'Triple', 'Full Board', '1', '2024-09-23', '2024-09-26', 3, 'Confirm');
 
 -- --------------------------------------------------------
 
@@ -219,7 +266,6 @@ CREATE TABLE `staff` (
 
 INSERT INTO `staff` (`id`, `name`, `work`, `user_id`) VALUES
 (1, 'Tushar pankhaniya', 'Manager', NULL),
-(3, 'rohit patel', 'Cook', NULL),
 (4, 'Dipak', 'Cook', NULL),
 (5, 'tirth', 'Helper', NULL),
 (6, 'mohan', 'Helper', NULL),
@@ -230,14 +276,7 @@ INSERT INTO `staff` (`id`, `name`, `work`, `user_id`) VALUES
 (11, 'rekha', 'Cook', NULL),
 (12, '', '', NULL),
 (13, 'Daniel', 'Cook', NULL),
-(14, '', '', NULL),
-(15, '', '', NULL),
-(16, '', '', NULL),
-(17, '', '', NULL),
-(18, '', '', NULL),
-(19, '', '', NULL),
-(20, '', '', NULL),
-(21, 'Elisha', 'Helper', NULL);
+(14, '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -258,7 +297,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `Username`, `Email`, `Password`) VALUES
 (8, 'Elisha', 'Musenge@gmail.com', '$2y$10$cFULuMvVtb4HtDZQ0SLlk.lZtFpfwJhTYm4vGLbPPYghv7QSx1Q2u'),
-(9, 'Mutale', 'MutaleMwanza@gmail.com', '$2y$10$DGvcxqn73FC8rha1D2DPR.aZ4tP24XKD5d1aRUlslBI9YigSLo5eK');
+(9, 'Mutale', 'MutaleMwanza@gmail.com', '$2y$10$DGvcxqn73FC8rha1D2DPR.aZ4tP24XKD5d1aRUlslBI9YigSLo5eK'),
+(10, 'Daniel', 'DanielMwakamui@gmail.com', '$2y$10$O1vU1/zUEQyYUKwvBo2A0ef.mEo91OZ9d9X1jHy3XXmjTx0GV7ghO'),
+(11, 'Joshua', 'Mapili45@gmail.com', '$2y$10$Ju7IbSKQAS2ygUQARaNLfesGVgFg4MvfQKym2b5TYOAUavtTaWOHC');
 
 --
 -- Indexes for dumped tables
@@ -269,9 +310,9 @@ INSERT INTO `users` (`id`, `Username`, `Email`, `Password`) VALUES
 --
 ALTER TABLE `issues`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_reported_by_user` (`reported_by`),
   ADD KEY `fk_assigned_to_user` (`assigned_to`),
-  ADD KEY `fk_issue_room` (`room_id`);
+  ADD KEY `fk_issue_room` (`room_id`),
+  ADD KEY `fk_reported_by_user` (`reported_by`);
 
 --
 -- Indexes for table `payment`
@@ -324,7 +365,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `issues`
 --
 ALTER TABLE `issues`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `queries`
@@ -342,7 +383,7 @@ ALTER TABLE `room`
 -- AUTO_INCREMENT for table `roombook`
 --
 ALTER TABLE `roombook`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `signup`
@@ -360,7 +401,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
@@ -371,7 +412,8 @@ ALTER TABLE `users`
 --
 ALTER TABLE `issues`
   ADD CONSTRAINT `fk_assigned_to_user` FOREIGN KEY (`assigned_to`) REFERENCES `staff` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `fk_issue_room` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `fk_issue_room` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `fk_reported_by_user` FOREIGN KEY (`reported_by`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
