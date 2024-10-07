@@ -3,27 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Room Service Support</title>
+    <title>Book My Stay</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/support.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 
     <style>
         .form-container {
@@ -71,34 +67,33 @@
         .icon-critical {
             color: darkred;
         }
+
+        
     </style>
 </head>
 
 <body>
     <!-- Header Start -->
-    <div class="container-fluid bg-primary py-1 mb-1 page-header">
-        <div class="container py-3">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Room Service Support</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="home.php">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Room Service Support</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
+    <nav>
+    <div class="logo">
+    <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png"> -->
+      <p>StayEASY</p>
     </div>
+    <ul>
+      <li><a href="home.php">Home</a></li>
+      <li><a href="contact.php">Contact</a>
+      <li><a href="support.php">Support</a>
+
+</li>
+      <a href="./logout.php"><button class="logoutbtn">Logout</button></a>
+    </ul>
+  </nav>
+   
     <!-- Header End -->
    
     <!-- Issue Reporting Form Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-4">Room Service Support</h6>
-            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="form-container">
@@ -160,16 +155,7 @@
             </div>
         </div>
     </div>
-    <!-- Issue Reporting Form End -->
-    <!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Custom JavaScript for Form Submission -->
+    
     <script>
         document.getElementById('issue_type').addEventListener('change', function() {
             const guestServicesField = document.getElementById('guest_services');

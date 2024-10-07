@@ -47,7 +47,7 @@ $userid = $_SESSION['user_id'];
     <ul>
       <li><a href="#firstsection">Home</a></li>
       <li><a href="#secondsection">Rooms</a></li>
-      <li><a href="report_issue.php">Support</a></li>
+      <li><a href="support.php">Support</a></li>
       <li><a href="#thirdsection">Facilites</a></li>
       <li><a href="contact.php">Contact</a>
 </li>
