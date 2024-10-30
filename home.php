@@ -167,7 +167,7 @@ $userid = $_SESSION['user_id'];
 
                 if($Name == "" || $Email == "" || $Country == ""){
                     echo "<script>swal({
-                        title: 'Fill the proper details',
+                        title: 'Please provide the missing details to complete your booking.',
                         icon: 'error',
                     });
                     </script>";

@@ -215,7 +215,7 @@ include '../config.php';
 
                 if($Name == "" || $Email == "" || $Country == ""){
                     echo "<script>swal({
-                        title: 'Fill the proper details',
+                        title: 'Please fill in missing information',
                         icon: 'error',
                     });
                     </script>";
