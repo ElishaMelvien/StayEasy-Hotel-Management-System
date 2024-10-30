@@ -221,7 +221,7 @@ include '../config.php';
                     </script>";
                 }
                 else{
-                    $sta = "NotConfirm";
+                    $sta = "PENDING_APPROVAL";
                     $sql = "INSERT INTO roombook(Name,Email,Country,Phone,RoomType,Bed,NoofRoom,Meal,cin,cout,stat,nodays) VALUES ('$Name','$Email','$Country','$Phone','$RoomType','$Bed','$NoofRoom','$Meal','$cin','$cout','$sta',datediff('$cout','$cin'))";
                     $result = mysqli_query($conn, $sql);
 
@@ -335,7 +335,7 @@ include '../config.php';
                     <td><?php echo $res['stat'] ?></td>
                     <td class="action">
                         <?php
-                            if($res['stat'] == "Confirm")
+                            if($res['stat'] == "APPROVED")
                             {
                                 echo " ";
                             }

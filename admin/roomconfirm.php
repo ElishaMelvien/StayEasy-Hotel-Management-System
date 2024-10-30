@@ -23,9 +23,9 @@ while($row=mysqli_fetch_array($re))
 }
 
 
-if($stat == "NotConfirm")
+if($stat == "PENDING_APPROVAL")
 {
-    $st = "Confirm";
+    $st = "APPROVED";
 
     $sql = "UPDATE roombook SET stat = '$st' WHERE id = '$id'";
     $result = mysqli_query($conn,$sql);

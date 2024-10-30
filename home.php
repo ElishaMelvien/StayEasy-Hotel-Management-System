@@ -172,7 +172,7 @@ $userid = $_SESSION['user_id'];
                     </script>";
                 }
                 else{
-                    $sta = "NotConfirm";
+                    $sta = "PENDING_APPROVAL";
                     $sql = "INSERT INTO roombook(Name,Email,Country,Phone,RoomType,Bed,NoofRoom,Meal,cin,cout,stat,nodays) VALUES ('$Name','$Email','$Country','$Phone','$RoomType','$Bed','$NoofRoom','$Meal','$cin','$cout','$sta',datediff('$cout','$cin'))";
                     $result = mysqli_query($conn, $sql);
 
