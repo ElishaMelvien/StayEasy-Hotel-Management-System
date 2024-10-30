@@ -41,7 +41,6 @@ $userid = $_SESSION['user_id'];
 <body>
   <nav>
     <div class="logo">
-    <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png"> -->
       <p>SINAMU LODGE</p>
     </div>
     <ul>
@@ -92,7 +91,7 @@ $userid = $_SESSION['user_id'];
                         <?php
 							foreach($countries as $key => $value):
 							echo '<option value="'.$value.'">'.$value.'</option>';
-                            //close your tags!!
+                      
 							endforeach;
 						?>
                     </select>

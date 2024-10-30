@@ -440,8 +440,8 @@
 	<header>
 		<h1>Invoice</h1>
 		<address>
-			<p>Book My Stay,</p>
-			<p>(+26 0779002328</p>
+			<p>SINAMU LODGE,</p>
+			<p>+260 975 997 505</p>
 		</address>
 		
 	</header>
@@ -514,7 +514,7 @@
 	<aside>
 		<h1><span>Contact us</span></h1>
 		<div>
-			<p align="center">Email :- Elihotech1@gmail.com || Web :- www.Book My Stay.com || Phone :- +260 978 195 399</p>
+			<p align="center">Email :- abednegokangwa1@gmail.com || Web :- www.sinamu lodge.com || Phone :- +260 975 997 505</p>
 		</div>
 	</aside>
 

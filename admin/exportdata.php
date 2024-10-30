@@ -12,7 +12,7 @@ while( $rows = mysqli_fetch_assoc($result)){
 
 if(isset($_POST["exportexcel"]))
 {
-    $filename = "StayEasy_roombook_report_".date('Ymd') .".xls";
+    $filename = "Sinamu_Lodge_Guest_Booking_Report_".date('Ymd') .".xls";
     header("Content-Type: application/vnd.ms-excel");
     header("Content-Disposition: attachment; filename=\"$filename\"");
     $show_coloumn = false;

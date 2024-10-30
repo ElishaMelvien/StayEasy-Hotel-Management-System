@@ -153,7 +153,7 @@ if (isset($_POST['guestdetailedit'])) {
         }
 
     </style>
-    <title>Document</title>
+    <title>SINAMU LODGE</title>
 </head>
 <body>
     <div id="editpanel">
