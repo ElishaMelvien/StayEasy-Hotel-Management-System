@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="utf-8">
-    <title>Stay Easy</title>
+    <title>SINAMU LODGE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <!-- <div class="container-fluid bg-primary py-5 mb-5 page-header">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
@@ -120,7 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
     <!-- Header End -->
 
     <!-- Contact Start -->
@@ -128,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="mb-5">For Any Room Related Query</h1>
+                <h1 class="mb-5">SINAMU LODGE Support</h1>
             </div>
 
             <?php if (isset($Msg) && !empty($Msg)) : ?>
@@ -161,7 +162,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Mobile</h5>
-                            <p class="mb-0">+260 978 195 399</p>
+                            <p class="mb-0">+260 975 997 505 | +260 956 800 057
+                            </p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -170,7 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">elishotech1@gmail.com</p>
+                            <p class="mb-0">abednegokangwa1@gmail.com </p>
                         </div>
                     </div>
                 </div>
@@ -233,8 +235,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Lusaka, Zambia</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+260 978 195 399</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>bookmystay.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+260 975 997 505</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>abednegokangwa1@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -246,22 +248,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/hos1.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/hos2.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/hos3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/hos3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jfif" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/hos1.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/hos5.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -272,17 +274,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">StayEasy</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">SINAMU LODGE</a>. <span id="year"></span> All Rights Reserved.
+                    <script>
+                        document.getElementById("year").textContent = new Date().getFullYear();
+                    </script>
+
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="home.php">Home</a>
+                            <a href="./logout.php">Logout</a>
+                            <a href="contact.php">Help</a>
+                            <a href="support.php">FQAs</a>
                         </div>
                     </div>
                 </div>

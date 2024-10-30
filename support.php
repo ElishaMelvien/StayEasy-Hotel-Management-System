@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Book My Stay</title>
+    <title>SINAMU LODGE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -77,7 +77,7 @@
     <nav>
     <div class="logo">
     <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png"> -->
-      <p>StayEASY</p>
+      <p>SINAMU LODGE</p>
     </div>
     <ul>
       <li><a href="home.php">Home</a></li>

@@ -17,30 +17,27 @@ include 'config.php';
     <!-- loading bar -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="./css/flash.css">
-    <title>Book My Stay</title>
+    <title>SINAMU LODGE</title>
 </head>
 <body>
     <!--  carousel -->
     <section id="carouselExampleControls" class="carousel slide carousel_section" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="carousel-image" src="./image/stayeasy1.jpg">
+                <img class="carousel-image" src="./image/hos1.jpg">
             </div>
             <div class="carousel-item">
-                <img class="carousel-image" src="./image/stayeasy2.jpg">
+                <img class="carousel-image" src="./image/hos2.jpg">
             </div>
             <div class="carousel-item">
-                <img class="carousel-image" src="./image/stayeasy3.jpg">
-            </div>
-            <div class="carousel-item">
-                <img class="carousel-image" src="./image/stayeasy4.jpg">
+                <img class="carousel-image" src="./image/hos5.jpg">
             </div>
         </div>
     </section>
     <!-- main section -->
     <section id="auth_section">
         <div class="logo">
-            <p>BOOK MY STAY</p>
+            <p>SINAMU LODGE</p>
         </div>
         <div class="auth_container">
             <div id="Log_in">
