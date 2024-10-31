@@ -20,6 +20,55 @@ include '../config.php';
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="./css/roombook.css">
     <title>SINAMU LODGE - Admin</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get('approved') === 'success') {
+        Swal.fire({
+            icon: 'success',
+            title: 'Room Booking Approved',
+            confirmButtonColor: "#66BB6A",
+            confirmButtonText: 'OK'
+        }).then(() => {
+           
+            window.history.replaceState({}, document.title, window.location.pathname);
+        });
+    }
+});
+
+</script>
+
+<style>
+        .swal2-confirm {
+            background-color: #66BB6A; 
+            border: none; 
+            color: white; 
+            font-weight: bold; 
+            padding: none;
+        }
+
+        .swal2-cancel {
+            background-color: #EF5350; 
+            border: none; 
+            color: white; 
+            font-weight: bold;
+        }
+
+        .swal2-popup {
+            border-radius: 10px;
+        }
+
+        .swal2-title {
+            color: #333;
+        }
+
+        .swal2-html {
+            color: #555;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -341,7 +390,7 @@ include '../config.php';
                             }
                             else
                             {
-                                echo "<a href='roomconfirm.php?id=". $res['id'] ."'><button class='btn btn-success'>Confirm</button></a>";
+                                echo "<a href='roomconfirm.php?id=". $res['id'] ."' 'class='btn-confirm'><button class='btn btn-success'>Confirm</button></a>";
                             }
                         ?>
                         <a href="roombookedit.php?id=<?php echo $res['id'] ?>"><button class="btn btn-primary">Edit</button></a>

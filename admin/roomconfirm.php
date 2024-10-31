@@ -99,7 +99,9 @@ if($stat == "PENDING_APPROVAL")
 
         mysqli_query($conn,$psql);
 
-        header("Location:roombook.php");
+
+        header("Location: roombook.php?approved=success");
+        exit();
     }
 }
 // else
