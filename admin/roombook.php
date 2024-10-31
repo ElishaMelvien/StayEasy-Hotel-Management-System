@@ -20,27 +20,28 @@ include '../config.php';
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="./css/roombook.css">
     <title>SINAMU LODGE - Admin</title>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
 
-    if (urlParams.get('approved') === 'success') {
-        Swal.fire({
-            icon: 'success',
-            title: 'Room Booking Approved',
-            confirmButtonColor: "#66BB6A",
-            confirmButtonText: 'OK'
-        }).then(() => {
-           
-            window.history.replaceState({}, document.title, window.location.pathname);
+            if (urlParams.get('approved') === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Room Booking Approved',
+                    confirmButtonColor: "#66BB6A",
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                });
+            }
         });
-    }
-});
 
-</script>
+    </script>
 
-<style>
+    <style>
         .swal2-confirm {
             background-color: #66BB6A; 
             border: none; 
