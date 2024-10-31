@@ -82,7 +82,7 @@
     <ul>
       <li><a href="home.php">Home</a></li>
       <li><a href="contact.php">Contact</a>
-      <li><a href="support.php">Support</a>
+      
 
 </li>
       <a href="./logout.php"><button class="logoutbtn">Logout</button></a>
