@@ -66,6 +66,8 @@ if($usermail == true){
         <iframe class="frames frame3" src="./payment.php" frameborder="0"></iframe>
         <iframe class="frames frame4" src="./room.php" frameborder="0"></iframe>
         <iframe class="frames frame4" src="./staff.php" frameborder="0"></iframe>
+        <iframe class="frames frame4" src="./view_issues.php" frameborder="0"></iframe>
+
     </div>
 </body>
 

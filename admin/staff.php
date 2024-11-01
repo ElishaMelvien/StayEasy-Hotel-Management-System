@@ -24,13 +24,13 @@ include '../config.php';
             padding: 10px;
         }
         .table td, .table th {
-            padding-left: 20px; /* Add left padding */
+            padding-left: 20px;
         }
         .table .staff-name {
-            text-align: right; /* Align staff names to the right */
+            text-align: right;
         }
         .room-title {
-            margin-bottom: 10px; /* Adjust this value to control space between heading and table */
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -69,7 +69,7 @@ include '../config.php';
 
             if ($result) {
                 header("Location: staff.php");
-                exit(); // Ensure script stops executing after redirect
+                exit(); 
             }
         }
         ?>

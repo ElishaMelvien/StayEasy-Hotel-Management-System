@@ -36,7 +36,7 @@ if ($stmt === false) {
 }
 
 
-$stmt->bind_param('sssiiss', $issue_type, $guest_services, $severity, $message, $reported_by, $reported_by, $usermail);
+$stmt->bind_param('ssssiss', $issue_type, $guest_services, $severity, $message, $reported_by, $reported_by, $usermail);
 
 if ($stmt->execute()) {
     echo json_encode(['status' => 'success', 'message' => 'Issue reported successfully.']);
