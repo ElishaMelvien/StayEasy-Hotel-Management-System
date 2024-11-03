@@ -18,20 +18,15 @@ include '../config.php';
     <!-- sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./css/view-issues.css">
     <title>SINAMU LODGE - Admin</title>
-    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 <body>
-
     <div class="searchsection">
         <input type="text" name="search_bar" id="search_bar" placeholder="search..." onkeyup="searchFun()">
     </div>
-
-        <!-- Modal for Assigning Issue -->
     <div class="modal fade" id="assignIssueModal" tabindex="-1" aria-labelledby="assignIssueModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -46,7 +41,6 @@ include '../config.php';
                             <label for="staffMember" class="form-label">Select Staff Member</label>
                             <select class="form-select" id="staffMember" name="staffMember" required>
                                 <option value="" disabled selected>Select Staff Member</option>
-                                <!-- Staff options will be populated here -->
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Assign</button>
@@ -55,8 +49,6 @@ include '../config.php';
             </div>
         </div>
     </div>
-
-
     <div class="roombooktable table-responsive-xl">
         <?php
             $issuesTableSQL = "SELECT * FROM issues";
@@ -115,11 +107,10 @@ include '../config.php';
                         <button class="btn btn-warning" onclick="openAssignModal(<?php echo $issue['id']; ?>, '<?php echo $issue['issue_type']; ?>')">Assign</button>
                         <!-- <button class="btn btn-warning">Assign</button> -->
                     <?php } elseif ($issue['status'] == 'In Progress') { ?>
-                        <button class="btn btn-success">Mark as Resolved</button>
-                        <button class="btn btn-secondary">Reassign</button>
+                        <button class="btn btn-success" onclick="">Mark as Resolved</button>
+                        <button class="btn btn-secondary" onclick="openAssignModal(<?php echo $issue['id']; ?>, '<?php echo $issue['issue_type']; ?>')">Reassign</button>
                     <?php } elseif ($issue['status'] == 'Resolved') { ?>
-                        <button class="btn btn-primary">Close Issue</button>
-                        <button class="btn btn-warning">Reopen</button>
+                        <button class="btn btn-primary" onclick="">Close</button>
                     <?php } elseif ($issue['status'] == 'Closed') { ?>
                         <button class="btn btn-warning">Reopen</button>
                     <?php } ?>
@@ -134,6 +125,5 @@ include '../config.php';
 </div>
 </body>
 <script src="./javascript/view_issues.js"></script>
-
 </html>
 

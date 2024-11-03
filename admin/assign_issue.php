@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['issue_type'])) {
     echo json_encode($staffMembers);
     exit;
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Handle POST request for assigning issues
     $data = json_decode(file_get_contents("php://input"), true);
 
     if (isset($data['issueId']) && isset($data['staffId'])) {
@@ -41,13 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['issue_type'])) {
         $staffStmt->fetch();
         $staffStmt->close();
 
-        // Check if staff name was found
         if (!$staffName) {
             echo json_encode(['success' => false, 'message' => 'Staff member not found.']);
             exit;
         }
 
-        // Update issue with staff name in assigned_to
         $sql = "UPDATE issues SET assigned_to = ?, status = 'In Progress' WHERE id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("si", $staffName, $issueId);
