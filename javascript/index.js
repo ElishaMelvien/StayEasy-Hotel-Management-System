@@ -1,6 +1,6 @@
 const login = document.getElementById('Log_in');
 const signup = document.getElementById('usersignup');
-// console.log("================signup");
+// cons
 
 //login - sigup
 signuppage = () => {

@@ -3,7 +3,6 @@
 include '../config.php';
 session_start();
 
-// page redirect
 $usermail="";
 $usermail=$_SESSION['usermail'];
 if($usermail == true){
@@ -55,7 +54,6 @@ if($usermail == true){
             <li class="pagebtn"><img src="../image/icon/staff.png">&nbsp&nbsp&nbsp Staff</li>
             <li class="pagebtn"><i class="fa-solid fa-bell-concierge"></i>&nbsp&nbsp&nbsp; Room Service Support</li>
             <li class="pagebtn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp; Users</li>
-            <!-- <i class="fa-solid fa-bell-concierge"></i> -->
         </ul>
     </nav>
     
@@ -70,7 +68,5 @@ if($usermail == true){
 
     </div>
 </body>
-
 <script src="./javascript/script.js"></script>
-
 </html>

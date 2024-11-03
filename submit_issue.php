@@ -20,7 +20,6 @@ if (empty($_POST['issue_type']) || empty($_POST['severity']) || empty($_POST['me
     exit;
 }
 
-// Prepare data
 $reported_by = $_SESSION['user_id'];
 $usermail = $_SESSION['usermail'];
 $issue_type = $_POST['issue_type'];

@@ -105,7 +105,6 @@ include '../config.php';
                 <td class="action">
                     <?php if ($issue['status'] == 'Reported') { ?>
                         <button class="btn btn-warning" onclick="openAssignModal(<?php echo $issue['id']; ?>, '<?php echo $issue['issue_type']; ?>')">Assign</button>
-                        <!-- <button class="btn btn-warning">Assign</button> -->
                     <?php } elseif ($issue['status'] == 'In Progress') { ?>
                         <button class="btn btn-success" onclick="">Mark as Resolved</button>
                         <button class="btn btn-secondary" onclick="openAssignModal(<?php echo $issue['id']; ?>, '<?php echo $issue['issue_type']; ?>')">Reassign</button>

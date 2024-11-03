@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>SINAMU LODGE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
-
     <link rel="stylesheet" href="./css/support.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Icon Font Stylesheet -->
-
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-
     <style>
         .form-container {
             max-width: 500px; 
@@ -66,32 +59,22 @@
         }
         .icon-critical {
             color: darkred;
-        }
-
-        
+        } 
     </style>
 </head>
 
 <body>
-    <!-- Header Start -->
     <nav>
-    <div class="logo">
-    <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png"> -->
-      <p>SINAMU LODGE</p>
-    </div>
-    <ul>
-      <li><a href="home.php">Home</a></li>
-      <li><a href="contact.php">Contact</a>
-      
-
-</li>
-      <a href="./logout.php"><button class="logoutbtn">Logout</button></a>
-    </ul>
+        <div class="logo">
+            <p>SINAMU LODGE</p>
+        </div>
+        <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="contact.php">Contact</a>
+            </li>
+        <a href="./logout.php"><button class="logoutbtn">Logout</button></a>
+        </ul>
   </nav>
-   
-    <!-- Header End -->
-   
-    <!-- Issue Reporting Form Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -137,7 +120,6 @@
                                         <option value="Dessert">Dessert</option>
                                     </select>
                                 </div>
-                               
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
                                         <textarea class="form-control" name="message" placeholder="Describe your issue" id="message" style="height: 150px" required></textarea>

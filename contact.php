@@ -1,15 +1,14 @@
 <?php
-// Include the PHPMailer library
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Include PHPMailer autoloader
 require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 require 'vendor/phpmailer/phpmailer/src/Exception.php';
 
 $hostname = "localhost"; 
-$username = "root";
+$username = "root"; 
 $password = "";
 $database = "book my stay";
 
@@ -34,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'elishotech1@gmail.com';
-            $mail->Password   = 'tqcw imcm tfjq gtwl'; // Use your generated App Password
+            $mail->Password   = 'tqcw imcm tfjq gtwl'; 
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
@@ -65,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -102,28 +100,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    
-
-    <!-- Header Start -->
-    <!-- <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Contact</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="home.php">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Header End -->
-
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -135,7 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php if (isset($Msg) && !empty($Msg)) : ?>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-        // Display success message using SweetAlert2
             Swal.fire({
             icon: 'success',
             title: '<?php echo $Msg; ?>',
@@ -278,9 +253,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <script>
                         document.getElementById("year").textContent = new Date().getFullYear();
                     </script>
-
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         
                     </div>
                     <div class="col-md-6 text-center text-md-end">
@@ -298,8 +270,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Footer End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -307,8 +277,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 </html>

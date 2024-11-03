@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['issue_type'])) {
         $issueId = $data['issueId'];
         $staffId = $data['staffId'];
 
-        // Fetch staff name based on staffId
         $staffSql = "SELECT name FROM staff WHERE id = ?";
         $staffStmt = $conn->prepare($staffSql);
         $staffStmt->bind_param("i", $staffId);

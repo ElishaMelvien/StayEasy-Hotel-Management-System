@@ -34,7 +34,7 @@
     $chartroom4re = mysqli_query($conn, $chartroom4);
     $chartroom4row = mysqli_num_rows($chartroom4re);
 ?>
-<!-- moriss profit -->
+
 <?php 	
 					$query = "SELECT * FROM payment";
 					$result = mysqli_query($conn, $query);
@@ -59,7 +59,6 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <!-- morish bar -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -94,7 +93,6 @@
         </div>
     </div>
 </body>
-
 
 
 <script>
